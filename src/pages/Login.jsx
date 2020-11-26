@@ -9,7 +9,7 @@ function Login() {
     function handlePasswordOnChange(event) {
         setPassword(event.target.value);
     }
-    function loginUser(event) {
+    function loginUser(event) { 
         event.preventDefault();
         if (username === password) {
             alert("Welcome")
