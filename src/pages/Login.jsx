@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../styles/Auth.css';
+import '../styles/Login.css';
 function Login() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -18,15 +18,26 @@ function Login() {
         }
     }
     return (
-        <div className={"auth-container"}>
-            <form className={"auth"} onSubmit={loginUser}>
+        <div className={"contact"}>
+            <h1>LOG IN</h1>
+            <div className={"txtb"} onSubmit={loginUser}>
+            <label> EMAIL:</label>
                 <input onChange={handleUsernameOnChange} value={username} type={"text"}
-                       placeholder={"Enter your username"}/>
+                       placeholder={"Enter your email"}/>
+
+        </div>   
+
+               <div className={"txtb"} onSubmit={loginUser}> 
+               <label> PASSWORD:</label>       
                 <input onChange={handlePasswordOnChange} value={password} type={"password"}
                        placeholder={"Enter your password"}/>
-                <button type={"submit"}>Login</button>
-            </form>
-        </div>
+
+                </div>
+                <p class="send">LOG IN</p>
+                <h2>  <a href="Signup"> Don't have an account? click here to sign up </a></h2>
+                </div>
+                    
+           
     )
 }
 export default Login;
